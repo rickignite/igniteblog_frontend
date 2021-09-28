@@ -14,11 +14,8 @@ const Article = () => {
       {({ data: { articles } }) => {
 
         if (articles.length) {
-          const imageUrl =
-            process.env.NODE_ENV !== "development"
-              ? articles[0].image.url
-              : process.env.REACT_APP_BACKEND_URL + articles[0].image.url;
-            console.log(articles[0]);
+          const imageUrl = articles[0].image.url;
+              
           return (
             <div>
               <div
